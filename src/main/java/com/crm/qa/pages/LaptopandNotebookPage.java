@@ -51,6 +51,7 @@ public class CamerasPage extends TestBase {
 	
 	@FindBy(xpath="//body//div[@id='product-category']//div[@class='row']//div[@class='row']//div[2]//div[1]//div[2]//div[1]//p[2]")
 	WebElement camera2prize;
+	
 	public String validateCamerasPageTitle() {
 		return driver.getTitle();
 	}
@@ -58,10 +59,9 @@ public class CamerasPage extends TestBase {
 	public int countProduct() {
 		List<WebElement> myListToCheck=driver.findElements(By.xpath("//div[@class='product-thumb']"));
 		if(myListToCheck.size()>0){
-		//do this
 			return myListToCheck.size();
-		}else{
-		//do something else
+		}
+		else{
 			return 0;
 		}
 	}
