@@ -8,8 +8,6 @@ import org.testng.annotations.Test;
 
 import com.crm.qa.base.TestBase;
 import com.crm.qa.pages.CamerasPage;
-//import com.crm.qa.pages.LoginPage;
-//import com.crm.qa.pages.LoginPage;
 
 public class CamerasPageTest extends TestBase {
 	CamerasPage camerasPage;
