@@ -41,14 +41,6 @@ public class HomePageTest extends TestBase {
 		Assert.assertEquals(null, null);
 	}
 	
-	
-	
-	
-	
-	
-	
-	
-	
 	@AfterMethod
 	public void tearDown() {
 		driver.quit();
