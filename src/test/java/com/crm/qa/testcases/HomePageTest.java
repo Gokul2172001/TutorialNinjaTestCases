@@ -7,7 +7,6 @@ import org.testng.annotations.Test;
 import com.crm.qa.base.TestBase;
 import com.crm.qa.pages.HomePage;
 import com.crm.qa.pages.LoginPage;
-import com.crm.qa.pages.TabletsPage;
 import com.crm.qa.util.TestUtil;
 
 public class HomePageTest extends TestBase {
@@ -40,6 +39,14 @@ public class HomePageTest extends TestBase {
 		String tabletsPage = homePage.clickOnTabletsLink();
 		Assert.assertEquals(null, null);
 	}
+	
+	
+	
+	
+	
+	
+	
+	
 	
 	@AfterMethod
 	public void tearDown() {

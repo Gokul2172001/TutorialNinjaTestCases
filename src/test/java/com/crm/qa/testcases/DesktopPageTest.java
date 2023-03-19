@@ -5,83 +5,84 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import com.crm.qa.base.TestBase;
-import com.crm.qa.pages.CamerasPage;
+import com.crm.qa.pages.DesktopPage;
 
-public class CamerasPageTest extends TestBase {
-	CamerasPage camerasPage;
+public class DesktopPageTest extends TestBase {
+	DesktopPage desktopPage;
 	
-	public CamerasPageTest() {
+	public DesktopPageTest() {
 		super();
 	}
 	
 	@BeforeMethod
 	public void setUp() {
 		initialization();
-		camerasPage = new CamerasPage();
+		desktopPage = new DesktopPage();
 		driver.findElement(By.xpath("//input[@name='email']")).sendKeys("gokul.elumalai12@gmail.com");
 		driver.findElement(By.xpath("//input[@name='password']")).sendKeys("Gokul_21122001");
 		driver.findElement(By.xpath("//input[@type='submit']")).click();
-		driver.findElement(By.xpath("//li[7]")).click();
+		driver.findElement(By.xpath("//a[normalize-space()='Laptops & Notebooks']")).click();
+		driver.findElement(By.xpath("//a[normalize-space()='Show All Laptops & Notebooks']")).click();
 	}
 	
 	@Test(priority=1)
-	public void cameraPageTitleTest() {
-		String title = camerasPage.validateCamerasPageTitle();
-		Assert.assertEquals(title,"Cameras");
+	public void desktopPageTitleTest() {
+		String title = desktopPage.validateDesktopPageTitle();
+		Assert.assertEquals(title,"Desktop");
 	}
 	
 	@Test(priority=2)
-	public void cameraPageProductCountTest() {
-		int count = camerasPage.countProduct();
+	public void desktopPageProductCountTest() {
+		int count = desktopPage.countProduct();
 		Assert.assertEquals(count, 2);
 	}
 	
 	@Test(priority=3) 
-	public void cameraPageProductCheckTest() {
-		boolean flag=camerasPage.checkProduct();
+	public void desktopPageProductCheckTest() {
+		boolean flag=desktopPage.checkProduct();
 		Assert.assertEquals(flag, null);
 	}
 	
 	@Test(priority=4)
-	public void cameraPageFilterTest() {
-		boolean flag=camerasPage.filterCheck();
+	public void desktopPageFilterTest() {
+		boolean flag=desktopPage.filterCheck();
 		Assert.assertEquals(flag, flag);
 	}
 	
 	@Test(priority=5)
-	public void cameraPageWishlistTest() {
-		String wishlistmsg=camerasPage.wishlistCheck();
+	public void desktopPageWishlistTest() {
+		String wishlistmsg=desktopPage.wishlistCheck();
 		//System.out.println(wishlistmsg);
 		Assert.assertEquals(wishlistmsg, "My Wish List");
 	}
 	
 	@Test(priority=6)
-	public void cameraPrizeTest() {
-		String price=camerasPage.productPrize();
+	public void desktopPrizeTest() {
+		String price=desktopPage.productPrize();
 		Assert.assertEquals(price, "Ex Tax: $80.00");
 	}
 	
 	@Test(priority=7) 
-	public void cameraViewGridListTest() {
-		boolean flag=camerasPage.viewListGrid();
+	public void desktopViewGridListTest() {
+		boolean flag=desktopPage.viewListGrid();
 		Assert.assertEquals(flag, true);
 	}
 	
 	@Test(priority=8)
 	public void imgCheckTest() {
-		boolean flag=camerasPage.imgCheck();
+		boolean flag=desktopPage.imgCheck();
 		Assert.assertEquals(flag, true);
 	}
 	
 	@Test(priority=9)
 	public void relatedProductTest() {
-		String related=camerasPage.relatedProduct();
+		String related=desktopPage.relatedProduct();
 		Assert.assertEquals(related, "Related Products");
 	}
 	
 	@Test(priority=10)
 	public void productComparison() {
-		String comparison=camerasPage.productCompare();
+		String comparison=desktopPage.productCompare();
 		Assert.assertEquals(comparison, "Product Comparison");
 	}
 	@AfterMethod

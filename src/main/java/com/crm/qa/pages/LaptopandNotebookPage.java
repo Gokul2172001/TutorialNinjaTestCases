@@ -8,7 +8,7 @@ import org.openqa.selenium.support.FindBy;
 
 import com.crm.qa.base.TestBase;
 
-public class CamerasPage extends TestBase {
+public class LaptopandNotebookPage extends TestBase {
 	
 	@FindBy(xpath="//input[@type='radio']")
 	WebElement radio;
@@ -51,17 +51,17 @@ public class CamerasPage extends TestBase {
 	
 	@FindBy(xpath="//body//div[@id='product-category']//div[@class='row']//div[@class='row']//div[2]//div[1]//div[2]//div[1]//p[2]")
 	WebElement camera2prize;
-	
-	public String validateCamerasPageTitle() {
+	public String validateLaptopandNotebookPageTitle() {
 		return driver.getTitle();
 	}
 	
 	public int countProduct() {
 		List<WebElement> myListToCheck=driver.findElements(By.xpath("//div[@class='product-thumb']"));
 		if(myListToCheck.size()>0){
+		//do this
 			return myListToCheck.size();
-		}
-		else{
+		}else{
+		//do something else
 			return 0;
 		}
 	}
@@ -103,9 +103,10 @@ public class CamerasPage extends TestBase {
 		//driver.findElement(By.xpath("//img[@class='img-responsive']"));
 		List<WebElement> myListToCheck=driver.findElements(By.xpath("//img[@class='img-responsive']"));
 		if(myListToCheck.size()==3){
+		//do this
 			return true;
-		}
-		else{
+		}else{
+		//do something else
 			return false;
 		}
 	}
