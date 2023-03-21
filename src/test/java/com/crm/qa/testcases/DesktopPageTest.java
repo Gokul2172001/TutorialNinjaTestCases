@@ -21,20 +21,22 @@ public class DesktopPageTest extends TestBase {
 		driver.findElement(By.xpath("//input[@name='email']")).sendKeys("gokul.elumalai12@gmail.com");
 		driver.findElement(By.xpath("//input[@name='password']")).sendKeys("Gokul_21122001");
 		driver.findElement(By.xpath("//input[@type='submit']")).click();
-		driver.findElement(By.xpath("//a[normalize-space()='Laptops & Notebooks']")).click();
-		driver.findElement(By.xpath("//a[normalize-space()='Show All Laptops & Notebooks']")).click();
+		//driver.findElement(By.xpath("//a[normalize-space()='Laptops & Notebooks']")).click();
+		//driver.findElement(By.xpath("//a[normalize-space()='Show All Laptops & Notebooks']")).click();
+		driver.findElement(By.xpath("//a[normalize-space()='Desktops']")).click();
+		driver.findElement(By.xpath("//a[normalize-space()='Show All Desktops']")).click();
 	}
 	
 	@Test(priority=1)
 	public void desktopPageTitleTest() {
 		String title = desktopPage.validateDesktopPageTitle();
-		Assert.assertEquals(title,"Desktop");
+		Assert.assertEquals(title,"Desktops");
 	}
 	
 	@Test(priority=2)
 	public void desktopPageProductCountTest() {
 		int count = desktopPage.countProduct();
-		Assert.assertEquals(count, 2);
+		Assert.assertEquals(count, 12);
 	}
 	
 	@Test(priority=3) 

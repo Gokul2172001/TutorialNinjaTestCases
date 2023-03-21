@@ -3,17 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.crm.qa.testcases.LaptopandNotebookPageTest">
+      <class name="com.crm.qa.testcases.DesktopPageTest">
         <methods>
-          <include name="laptopandNotebookPageProductCountTest"/>
-          <include name="tearDown"/>
-          <include name="imgCheckTest"/>
+          <include name="desktopPageTitleTest"/>
           <include name="setUp"/>
-          <include name="laptopandNotebookPageProductCheckTest"/>
-          <include name="laptopandNotebookPrizeTest"/>
-          <include name="relatedProductTest"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- com.crm.qa.testcases.LaptopandNotebookPageTest -->
+      </class> <!-- com.crm.qa.testcases.DesktopPageTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

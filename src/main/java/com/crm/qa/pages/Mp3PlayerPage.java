@@ -1,14 +1,11 @@
 package com.crm.qa.pages;
-
 import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
 import com.crm.qa.base.TestBase;
 
-public class CamerasPage extends TestBase {
+public class Mp3PlayerPage extends TestBase {
 	
 	@FindBy(xpath="//input[@type='radio']")
 	WebElement radio;
@@ -40,37 +37,52 @@ public class CamerasPage extends TestBase {
 	@FindBy(xpath="//button[@id='button-cart']")
 	WebElement addToCart;
 	
-	@FindBy(xpath="//a[normalize-space()='Canon EOS 5D']")
-	WebElement camera1;
+	@FindBy(xpath="//a[normalize-space()='iPod Classic']")
+	WebElement ipod1;
 	
-	@FindBy(xpath="//img[@title='Nikon D300']")
-	WebElement camera2;
+	@FindBy(xpath="//a[normalize-space()='iPod Nano']")
+	WebElement ipod2;
+	
+	@FindBy(xpath="//a[normalize-space()='ipod Shuffle']")
+	WebElement ipod3;
+	
+	@FindBy(xpath="//a[normalize-space()='ipod Touch']")
+	WebElement ipod4;
 	
 	@FindBy(xpath="//p[@class='price']")
-	WebElement camera1prize;
+	WebElement ipod1prize;
 	
 	@FindBy(xpath="//body//div[@id='product-category']//div[@class='row']//div[@class='row']//div[2]//div[1]//div[2]//div[1]//p[2]")
-	WebElement camera2prize;
-	public String validateCamerasPageTitle() {
+	WebElement ipod2prize;
+	
+	@FindBy(xpath="//p[@class='price']")
+	WebElement ipod3prize;
+	
+	@FindBy(xpath="//body//div[@id='product-category']//div[@class='row']//div[@class='row']//div[2]//div[1]//div[2]//div[1]//p[2]")
+	WebElement ipod4prize;
+	
+	public String validateMp3PlayerPageTitle() {
 		return driver.getTitle();
 	}
 	
 	public int countProduct() {
 		List<WebElement> myListToCheck=driver.findElements(By.xpath("//div[@class='product-thumb']"));
 		if(myListToCheck.size()>0){
-		//do this
 			return myListToCheck.size();
 		}else{
-		//do something else
 			return 0;
 		}
 	}
 	
 	public boolean checkProduct() {
-	if(camera1.isDisplayed())
-		if(camera1prize.isDisplayed())
-				if(camera2.isDisplayed())
-					if(camera2prize.isDisplayed()) {
+	if(ipod1.isDisplayed())
+		if(ipod1prize.isDisplayed())
+				if(ipod2.isDisplayed())
+					if(ipod2prize.isDisplayed())
+						if(ipod3.isDisplayed())
+							if(ipod3prize.isDisplayed())
+								if(ipod4.isDisplayed())	
+									if(ipod4prize.isDisplayed()) {
 						return true;
 					}
 					else {
@@ -100,13 +112,10 @@ public class CamerasPage extends TestBase {
 	}
 	
 	public boolean imgCheck() {
-		//driver.findElement(By.xpath("//img[@class='img-responsive']"));
 		List<WebElement> myListToCheck=driver.findElements(By.xpath("//img[@class='img-responsive']"));
 		if(myListToCheck.size()==3){
-		//do this
 			return true;
 		}else{
-		//do something else
 			return false;
 		}
 	}
