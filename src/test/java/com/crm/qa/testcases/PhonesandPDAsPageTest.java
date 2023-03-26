@@ -84,6 +84,7 @@ public class CamerasPageTest extends TestBase {
 		String comparison=camerasPage.productCompare();
 		Assert.assertEquals(comparison, "Product Comparison");
 	}
+	
 	@AfterMethod
 	public void tearDown() {
 		driver.quit();
