@@ -9,7 +9,6 @@ import com.crm.qa.pages.LaptopandNotebookPage;
 
 public class LaptopandNotebookPageTest extends TestBase {
 	LaptopandNotebookPage laptopandNotebookPage;
-	
 	public LaptopandNotebookPageTest() {
 		super();
 	}
