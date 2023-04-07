@@ -1,11 +1,8 @@
 package com.crm.qa.pages;
-
 import java.util.List;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
-
 import com.crm.qa.base.TestBase;
 
 public class CamerasPage extends TestBase {
