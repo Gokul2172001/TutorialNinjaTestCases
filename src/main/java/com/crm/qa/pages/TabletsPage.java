@@ -4,7 +4,6 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import com.crm.qa.base.TestBase;
-
 public class CamerasPage extends TestBase {
 	
 	@FindBy(xpath="//input[@type='radio']")
@@ -95,7 +94,6 @@ public class CamerasPage extends TestBase {
 	}
 	
 	public boolean imgCheck() {
-		//driver.findElement(By.xpath("//img[@class='img-responsive']"));
 		List<WebElement> myListToCheck=driver.findElements(By.xpath("//img[@class='img-responsive']"));
 		if(myListToCheck.size()==3){
 			return true;
