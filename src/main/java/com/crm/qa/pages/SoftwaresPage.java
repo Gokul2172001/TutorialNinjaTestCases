@@ -55,10 +55,8 @@ public class CamerasPage extends TestBase {
 	public int countProduct() {
 		List<WebElement> myListToCheck=driver.findElements(By.xpath("//div[@class='product-thumb']"));
 		if(myListToCheck.size()>0){
-		//do this
 			return myListToCheck.size();
 		}else{
-		//do something else
 			return 0;
 		}
 	}
@@ -100,10 +98,8 @@ public class CamerasPage extends TestBase {
 		//driver.findElement(By.xpath("//img[@class='img-responsive']"));
 		List<WebElement> myListToCheck=driver.findElements(By.xpath("//img[@class='img-responsive']"));
 		if(myListToCheck.size()==3){
-		//do this
 			return true;
 		}else{
-		//do something else
 			return false;
 		}
 	}
