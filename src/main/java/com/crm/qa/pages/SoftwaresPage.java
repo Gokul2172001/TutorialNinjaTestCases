@@ -95,7 +95,6 @@ public class CamerasPage extends TestBase {
 	}
 	
 	public boolean imgCheck() {
-		//driver.findElement(By.xpath("//img[@class='img-responsive']"));
 		List<WebElement> myListToCheck=driver.findElements(By.xpath("//img[@class='img-responsive']"));
 		if(myListToCheck.size()==3){
 			return true;
